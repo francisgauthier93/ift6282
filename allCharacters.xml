@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="Characters.rnc" type="application/relax-ng-compact-syntax"?><Characters><DC><character>
+<superHeroAlias>
+Batman</superHeroAlias>
+<realName>Bruce Wayne</realName><otherAliases><alias>Insider</alias><alias>Matches Malone</alias><alias>Robin</alias></otherAliases><relatives><relative>Simon Hurt (ancestor) Roderick Kane (grandfather) Betsy Kane (grandmother) Martha Wayne (mother) Thomas Wayne (father) Alfred Pennyworth (former guardian) Nathan Kane (uncle) Agatha Wayne (aunt) Damian Wayne (son) Dick Grayson (adopted son) Tim Drake (adopted son) Jason Todd (adopted son) Cassandra Cain (adopted daughter) Wayne Family</relative></relatives><affiliation><group>Batman Family</group><group>Justice League</group><group>Batman Incorporated</group><group>Outsiders</group><group>Wayne Enterprises</group><group>Club of Heroes</group><group>formerly White Lantern Corps</group><group>Sinestro Corps</group></affiliation><baseOfOperation><location>Batcave</location><location>Stately Wayne Manor</location><location>Gotham City 路 Hall of Justice</location><location>Justice League Watchtower</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Secret Identity</identity><citizenship>American</citizenship>
+<maritalStatus>Single</maritalStatus><occupation>Businessman</occupation>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 2"</height><weight>210 lbs (95 kg)</weight>
+<eyes>Blue</eyes>
+<hair>Black</hair>
+</characteristics><origin>
+<universe><location>New Earth</location></universe>
+<placeOfBirth><location>Gotham City</location></placeOfBirth><creators><creator>Bill Finger 路 Bob Kane</creator></creators>
+</origin>
+<firstAppearance>
+<title>Batman
+         
+         #401</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+Aquaman</superHeroAlias>
+<realName>Orin Atlan-son</realName><otherAliases><alias>Dweller in the Depths</alias><alias>Swimmer</alias><alias>Waterbearer</alias><alias>Mental Man</alias><alias>Aquaboy</alias><alias>Water Wraith</alias></otherAliases><relatives><relative>Mera (wife), Koryak (son), Arthur Curry, Jr. (son), A.J. (son), Orm Marius (half-brother), Debbie Perkins (half-sister), Drin (adopted brother), Atlanna (mother), Atlan (father), Atlena (aunt), Porm (adopted mother), Tom Curry (adopted father), Hila (sister-in-law), Haumond (uncle), Kraken (uncle), Honsu (grandfather), Lorelei (grandmother), Manu (ancestor), Nala (ancestor), Fatima (ancestor), Kalunga (ancestor), Gana (ancestor), Fiona (ancestor), Regin (ancestor), Kordax (ancestor), Bazil (ancestor), Cora (ancestor), Illya (ancestor), Dardanus (ancestor), Alloroc (ancestor), Cole (ancestor), Narmea (ancestor), Orin (ancestor), Loma (ancestor), Shalako (ancestor), Thorvall (ancestor)</relative></relatives><affiliation><group>Justice League</group><group>Aquaman Family</group><group>Atlantean Royal Family · formerly Black Lantern Corps</group><group>Justice League International</group><group>Justice League Detroit</group><group>U.N.</group><group>White Lantern Corps</group></affiliation><baseOfOperation><location>Atlantean Royal Palace · Poseidonis</location><location>Atlantis · formerly San Diego</location><location>California</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Public Identity</identity><citizenship>Atlantean</citizenship>
+<maritalStatus>Married</maritalStatus><occupation>Monarch</occupation>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 1"</height><weight>325 lbs (147 kg)</weight>
+<eyes>Blue</eyes>
+<hair>Blond</hair>
+</characteristics><origin>
+<universe><location>Earth-One · New Earth</location></universe>
+<placeOfBirth><location>Poseidonis</location><location>Atlantis</location></placeOfBirth><creators><creator>Mort Weisinger · Paul Norris</creator></creators>
+</origin>
+<firstAppearance>
+<title>More Fun Comics
+         
+         #73</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+Superman</superHeroAlias>
+<realName>Kal-El (birth); Clark Joseph Kent (legal name)</realName><otherAliases><alias>Clark White, Commander El</alias><alias>Gangbuster</alias><alias>Nightwing</alias><alias>Superboy</alias><alias>Superman Red / Blue</alias></otherAliases><relatives><relative>Lois Lane (wife), Jonathan Samuel Kent (son), Jor-El (birth father, deceased), Lara Lor-Van (birth mother, deceased), Jonathan Kent (adoptive father, deceased), Martha Kent (adoptive mother), Kara Zor-El (aka Supergirl, cousin), Kon-El/Conner Kent (aka Superboy, partial clone 路 adopted into both El and Kent families), Christopher Kent (aka Nightwing, foster son), Kem-L (ancestor, deceased), Rao (ancestor), See House of El and Kent Family for extended family line</relative></relatives><affiliation><group>Justice League</group><group>formerly Justice League</group><group>Daily Planet</group><group>Legion of Super-Heroes</group><group>Kryptonian Military Guild</group><group>Team Superman</group><group>Supermen of America</group><group>formerly Supermen of the Multiverse</group><group>Black Lantern Corps</group><group>White Lantern Corps</group></affiliation><baseOfOperation><location>Metropolis 路 Fortress of Solitude 路 Hall of Justice</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Secret Identity</identity><citizenship>American</citizenship>
+<maritalStatus>Married</maritalStatus><occupation>Reporter</occupation>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 3"</height><weight>235 lbs (107 kg)</weight>
+<eyes>Blue</eyes>
+<hair>Black</hair>
+</characteristics><origin>
+<universe><location>New Earth</location></universe>
+<placeOfBirth><location>Kryptonopolis</location><location>Krypton</location></placeOfBirth><creators><creator>Jerry Siegel 路 Joe Shuster</creator></creators>
+</origin>
+<firstAppearance>
+<title>Man of Steel
+         
+         #1</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+The_Flash</superHeroAlias>
+<realName>Bartholomew Henry "Barry" Allen</realName><otherAliases><alias>Black Flash</alias><alias>Parallax</alias><alias>Blue Lantern</alias></otherAliases><relatives><relative>Henry and Nora Allen (parents, deceased), Malcolm Thawne (brother), Iris Allen (wife), Don and Dawn Allen (children), Bart Allen (grandson) and Jenni Ognats (granddaughter), Wally West (nephew) - see Allen Family for complete family tree</relative></relatives><affiliation><group>Justice League</group><group>Flash Family 路 formerly Blue Lantern Corps</group><group>White Lantern Corps</group></affiliation><baseOfOperation><location>Central City</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Secret Identity</identity><citizenship>American</citizenship>
+<maritalStatus>Married</maritalStatus><occupation>Forensic Scientist</occupation>
+<education>Bachelors Degree (summa cum laude) in organic chemistry from Sun City University</education>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 0"</height><weight>195 lbs (88 kg)</weight>
+<eyes>Blue</eyes>
+<hair>Blond</hair>
+</characteristics><origin>
+<universe><location>Earth-One 路 New Earth</location></universe>
+<placeOfBirth><location>Fallville, Iowa</location></placeOfBirth><creators><creator>Robert Kanigher 路 Carmine Infantino</creator></creators>
+</origin>
+<firstAppearance>
+<title>Showcase
+         
+         #4</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+Green_Arrow</superHeroAlias>
+<realName>Oliver Jonas "Ollie" Queen</realName><relatives><relative>Robert Henry Queen (father, deceased), Moira Queen (mother, deceased), Dinah Lance (ex-wife), Connor Hawke (son), Robert Queen (son), Roy Harper (adopted son)</relative></relatives><affiliation><group>Justice League</group><group>Team Arrow</group><group>Queen Industries</group><group>N.S.A. · formerly Black Lantern Corps</group><group>White Lantern Corps</group><group>Outsiders</group><group>Justice League Elite</group></affiliation><baseOfOperation><location>Star City</location><location>California · formerly Seattle</location><location>Washington</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Secret Identity</identity><citizenship>American</citizenship>
+<maritalStatus>Divorced</maritalStatus><occupation>Former Businessman · Reporter</occupation>
+<education>College Graduate</education>
+</status><characteristics>
+<gender>Male</gender>
+<height>5' 11"</height><weight>195 lbs (88 kg)</weight>
+<eyes>Green</eyes>
+<hair>Blond</hair>
+</characteristics><origin>
+<universe><location>Earth-One · New Earth</location></universe>
+<creators><creator>Mort Weisinger · George Papp</creator></creators>
+</origin>
+<firstAppearance>
+<title>Adventure Comics
+         
+         #218</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+Martian_Manhunter</superHeroAlias>
+<realName>J'onn J'onzz</realName><otherAliases><alias>Fernus · John Jones · Bronze Wraith</alias><alias>Bloodwynd</alias><alias>many others (See Other Aliases )</alias></otherAliases><relatives><relative>M'yrnn J'onzz (father, deceased) · Sha'sheen J'onzz (mother, deceased) · M'yri'ah (wife, deceased) · K'hym (daughter, deceased) · Ma'alefa'ak (twin brother) · D'all (father-in-law, deceased) · J'ahrl J'onzz (ancestor, deceased)</relative></relatives><affiliation><group>Justice League of America · formerly Outsiders</group><group>Justice Experience</group><group>StormWatch</group><group>Justice League Task Force Justice League International</group><group>White Lantern Corps</group><group>Black Lantern Corps</group></affiliation><baseOfOperation><location>Mobile, formerly The Astral Plane · formerly Mars · formerly Middleton</location><location>Colorado · formerly Denver</location><location>Colorado · formerly Detroit</location><location>Michigan · formerly Z'Onn Z'Orr · formerly JLA Watchtower</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Public Identity</identity>
+<maritalStatus>Widowed</maritalStatus><occupation>Adventurer · Detective</occupation>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 7"</height><weight>300 lbs (136 kg)</weight>
+<eyes>Red</eyes>
+<hair>Bald</hair>
+</characteristics><origin>
+<universe><location>Earth-One · New Earth</location></universe>
+<placeOfBirth><location>Ma'aleca'andra</location></placeOfBirth><creators><creator>Joseph Samachson · Joe Certa</creator></creators>
+</origin>
+<firstAppearance>
+<title>Detective Comics
+         
+         #225</title>
+</firstAppearance></character><character>
+<superHeroAlias>
+Green_Lantern</superHeroAlias>
+<realName>Harold "Hal" Jordan</realName><otherAliases><alias>Parallax</alias><alias>the Spectre</alias><alias>Pol Manning</alias><alias>Green Lantern 2814.1, Highball</alias></otherAliases><relatives><relative>Martin Jordan (father, deceased), Jessica Jordan (mother, deceased), Jack Jordan (brother), Jim Jordan (brother), Air Wave (cousin), Jordan Family</relative></relatives><affiliation><group>Green Lantern Corps Justice League of America</group><group>formerly: New Guardians Justice League Europe Red Lantern Corps Orange Lantern Corps Sinestro Corps Blue Lantern Corps Black Lantern Corps White Lantern Corps Ferris Aircraft United States Air Force</group></affiliation><baseOfOperation><location>Edwards Air Force Base</location><location>Coast City / Oa</location></baseOfOperation><status>
+<alignment>Good</alignment>
+<identity>Secret Identity</identity><citizenship>American</citizenship>
+<maritalStatus>Single</maritalStatus><occupation>Adventurer</occupation>
+</status><characteristics>
+<gender>Male</gender>
+<height>6' 2"</height><weight>200 lbs (91 kg)</weight>
+<eyes>Brown</eyes>
+<hair>Brown</hair>
+</characteristics><origin>
+<universe><location>Earth-One 路 New Earth 路 Prime Earth</location></universe>
+<placeOfBirth><location>Coast City</location><location>California</location></placeOfBirth><creators><creator>John Broome 路 Gil Kane</creator></creators>
+</origin>
+<firstAppearance>
+<title>Showcase
+         
+         #22</title>
+</firstAppearance></character></DC><Marvel></Marvel></Characters>
