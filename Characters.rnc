@@ -1,0 +1,101 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = Characters
+
+Characters = element Characters{
+    DC,
+    Marvel
+}
+
+DC = element DC{
+    character*
+}
+
+Marvel = element Marvel{
+    character*
+}
+
+character = element character{
+    element superHeroAlias {text},
+    element realName {text},
+    aliases?,
+    relatives,
+    affiliation,
+    (element baseOfOperation {text} | baseOfOperation),
+    status,
+    characteristics,
+    origin,
+    firstAppearance,
+    lastAppearance?
+}
+
+baseOfOperation = element baseOfOperation{
+    element location {text}*
+}
+
+aliases = element otherAliases{
+    element alias {text}*
+}
+
+relatives = element relatives{
+    relative* 
+    }
+    
+relative = element relative{
+        attribute relation {Relation}?,
+        text
+    }
+
+Relation = "mother"|"father"|"sibling"|"cousin"|"uncle"|"aunt"|"child"|"wife"|"husband"|"nephew"|"ancestor"|"descendant"|"niece"|"knownRelative"
+
+affiliation = element affiliation{
+    element group {text}*
+}
+
+status = element status{
+    element alignment {text}?,
+    element identity {text}?,
+    element citizenship {text}?,
+    element maritalStatus {text}?,
+    element occupation {text}?,
+    element education {text}?
+}
+
+characteristics = element characteristics{
+    element gender {text}?,
+    element height {text}?,
+    element weight {text}?,
+    element eyes {text}?,
+    element hair {text}?
+}
+
+origin = element origin{
+    universe?,
+    placeOfBirth?,
+    creators?
+}
+
+firstAppearance = element firstAppearance{
+    appearance
+}
+
+lastAppearance = element lastAppearance{
+    appearance
+}
+
+appearance = (
+    element title {text}?,
+    element date {text}?
+)
+
+universe = element universe{
+    element location {text}*
+}
+
+placeOfBirth = element placeOfBirth{
+    element location {text}*
+}
+
+creators = element creators{
+    element creator {text}*
+}
