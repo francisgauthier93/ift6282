@@ -13,15 +13,46 @@
 	<h3>Liens vers les fichiers utilisés</h3>
 	<ul>
 		<li><a href="Characters.rnc">Schéma de validation RNC</a></li>
-		<li><a href="Characters.rnc" download>Schéma de validation RNC(téléchargement)</a></li>
 		<li><a href="charToXHTML">Feuille de style vers XHTML</a></li>
-		<li><a href="charToXHTML" download>Feuille de style vers XHTML(téléchargement)</a></li>
-		<li><a href="donneesWeb.zip" download></a>Accès aux scripts python et sh qui ont permis l'extraction des données du Web(.zip)</li>
+		<li><a href="donneesWeb.zip" download>Accès aux scripts python et sh qui ont permis l'extraction des données du Web(.zip)</a></li>
 	</ul>
 </p>
 
 <p>
 	<h2>Rapport:</h2>
+	<div>
+		<p>
+			<b>Problématique:</b>
+			Il existe beaucoup de super-héros, que ce soit dans l'univers de Marvel ou dans l'univers de DC. Ceux-ci ont beaucoup de liens ensembles et on peut recueillir beaucoup d'informations sur les super-héros sur le web. Ceux-ci sont des êtres à part entière qui ont parfois des vies plus complexes que les nôtres, car ils peuvent apparaître dans plusieurs éditions de comic books en cotoyant beaucoup d'autres personnages et peuvent même avoir des versions alternatives d'eux mêmes. Dans ce TP, mon but était de recueillir le plus d'information possible sur les super-héros. Pour avoir un base d'information utile, il y a beaucoup d'informations à retenir sur un super-héros. Autant ses alias, ses liens familiaux ou bien sa ville d'origine peuvent nous permettre d'en savoir plus sur le héros, mais pourrait permettre de créer des liens entre les super-héros. C'est-à-dire que plusieurs super-héros se regroupe dans une seule entité, par exemple la 'Justice League of America' ou les 'X-mens'. Ce sont des informations cruciales à récolter pour pouvoir faire une ontologie intéressante par la suite. En utilisant le format XML, on s'assure d'avoir des données uniformes et faciles à employés pour la suite des travaux.
+		</p>
+		<p>
+			<b>Apprentissages:</b>
+			<ul>
+				<li>Utilisation du format XML</li>
+				<li>Utilisation des schémas RNC de validation</li>
+				<li>Utilisation des feuilles de styles XSLT, des multiples fonctions xsl:... , utilisation des templates. Utilisation des expression XPath.</li>
+				<li>Principalement: Constatation de la difficulté à traiter automatiquement les données d'une page HTML prise sur le web. La non-uniformité des pages donne à chaque ligne d'automatisation une chance d'échouer étant donné qu'on a très peu de contrôle sur la façon dont les pages ont été créées.</li>
+				<li>J'ai beaucoup appris en utilisant la librairie BeautifulSoup4 qui est agréable à utiliser et tout de même bien documentée.</li>
+				<li>Dans ce TP, j'ai beaucoup appris par rapport à l'automatisation des scripts. J'ai pu approfondir ma connaissance des scripts .sh et de la syntaxe bash. Je trouve que c'est un acquis essentiel, mais qui n'est pas nécessairement montré dans d'autres cours. Le fait d'avoir à travailler avec beaucoup de fichiers et plusieurs données m'a forcé à me tourner vers l'automatisation. C'est génial.</li>
+			</ul>
+		</p>
+		<p>
+			<b>Difficultés:</b>
+			Les principales difficultés que j'ai rencontrées ont été dûes au fait des pages HTML que je devais traitées. Elles présentaient toutes des informations dans le même ordre, mais plusieurs informations sont manquantes pour certains personnages, ce qui a causé quelques problèmes. J'ai dû adapter mes scripts python pour rajouter quelques exceptions. Il y en aurait plusieurs autres à ajouter si on voudrait rajouter des super-héros encore moins populaires, avec moins d'informations. <br/>
+			Aussi, les données n'étant pas présentées uniformément, ce fut difficile de bien parser les informations. Parfois, les différents alias étaient séparés par des virgules, parfois par des point-virgules et parfois par d'autres caractères spéciaux. Comme ceux-ci se sont révélés un peu imprévisibles, cela me demandait beaucoup d'énergie pour traiter toutes les exceptions. Tout de même, en en traitant un minorité, la page en sortie est tout de même bien présentée. Je sais qu'il me reste quelques ajouts à faire pour mieux retirer des caractères spéciaux qui apparaissent, ainsi que pour mieux structurer les liens familiaux.<br/>
+			D'ailleurs, les liens familiaux ont causés problèmes, car il en existe beaucoup à classer et j'aimerais pouvoir attribuer un attribut correct sur chacune des personnes mentionnées. Par contre, certains personnages ont beaucoup de liens de parentés (env.20 liens), allant de grand-parents à petit-fils, en passant par des liens beaucoup plus vagues (tel que 'gardien') donc c'est quelque chose que j'ai mis de côté pour l'instant.
+		</p>
+		<p>
+			<b>Programmes utilisés:</b>
+			<ul>
+				<li>Pour la validation des fichiers XML: Oxygen 17</li>
+				<li>Pour la transformation des fichiers XML par une feuille de style XSLT: Oxygen 17</li>
+				<li>Pour enlever plusieurs tags HTML non-utilisés: commande 'sed' dans le terminal de Linux</li>
+				<li>Pour parcourir et parser les fichiers HTML et retirer les informations utiles: librairie python BeautifulSoup4 </li>
+			</ul>
+			
+		</p>
+	</div>
 </p>
 </body>
 </html>
