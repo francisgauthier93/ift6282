@@ -1,0 +1,107 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tp2: <http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp2#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+#1 Select all DC characters
+
+# SELECT ?subject WHERE {?subject tp2:characterOf 'DC Comics'}
+
+#2 Characters with black hair
+
+# SELECT * WHERE {?subject tp2:hair tp2:Black}
+
+#3 Select all Justice League members
+
+# SELECT ?subject 
+# WHERE {
+# 	?subject tp2:memberOf ?group
+# 	FILTER (str(?group) = "http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp2#Justice League")
+# }
+
+#4 Select all characters from New Earth Universe and show their identity
+
+# SELECT ?subject ?identity
+# WHERE {
+# 	?subject tp2:inUniverse ?univ .
+# 	?subject tp2:identity ?identity
+# 	FILTER (str(?univ) = "http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp2#New Earth")
+# }
+
+#5 Select characters which are base located where they were born
+
+# SELECT DISTINCT ?subject ?base WHERE 
+# {?subject tp2:basesOfOperation 
+# 	[rdfs:member ?base;] .
+# ?subject tp2:bornIn ?base}
+
+#6 Select characters and their weight(ordered)
+
+# SELECT ?subject ?weight WHERE
+# {?subject tp2:weight ?weight}
+# ORDER BY ?weight
+
+#7 Select characters which could ba matched romantically (single male and female)
+
+# SELECT DISTINCT ?subject1 ?subject2 WHERE
+# {{?subject1 tp2:maritalStatus tp2:Single} 
+# UNION {?subject1 tp2:maritalStatus tp2:Widowed}
+# UNION {?subject1 tp2:maritalStatus tp2:Divorced} .
+# {?subject2 tp2:maritalStatus tp2:Single} 
+# UNION {?subject2 tp2:maritalStatus tp2:Widowed}
+# UNION {?subject2 tp2:maritalStatus tp2:Divorced} .
+# ?subject1 tp2:gender tp2:Male .
+# ?subject2 tp2:gender tp2:Female .}
+
+#8 Select characters which could ba matched romantically (single male and female)
+#Adding constraint to have same moral alignment
+
+# SELECT DISTINCT ?subject1 ?subject2 WHERE
+# {{?subject1 tp2:maritalStatus tp2:Single} 
+# UNION {?subject1 tp2:maritalStatus tp2:Widowed}
+# UNION {?subject1 tp2:maritalStatus tp2:Divorced} .
+# {?subject2 tp2:maritalStatus tp2:Single} 
+# UNION {?subject2 tp2:maritalStatus tp2:Widowed}
+# UNION {?subject2 tp2:maritalStatus tp2:Divorced} .
+# ?subject1 tp2:gender tp2:Male .
+# ?subject2 tp2:gender tp2:Female .
+# ?subject1 tp2:alignment ?alig .
+# ?subject2 tp2:alignment ?alig .}
+
+#9 Select the american characters and show their occupation
+
+# SELECT ?subject ?job WHERE{
+# ?subject tp2:citizenship tp2:American .
+# ?subject tp2:occupation ?job}
+
+#10 Select possible enemies (Bad and Good in same place)
+
+# SELECT DISTINCT ?subject1 ?subject2 ?place WHERE{
+# ?subject1 tp2:basesOfOperation 
+# 	[rdfs:member ?place;] .
+# ?subject2 tp2:basesOfOperation 
+# 	[rdfs:member ?place;] .
+# ?subject1 tp2:alignment tp2:Good .
+# ?subject2 tp2:alignment tp2:Bad .
+# }
+
+#11 Count the number of deceased relatives of a character
+
+# SELECT ?subject (COUNT(?dec) as ?decCount) WHERE{
+# ?subject tp2:relative ?person .
+# ?person tp2:deceased ?dec .
+# }
+# GROUP BY ?subject
+# ORDER BY ?decCount
+
+#12 Find common Relatives between characters
+
+# SELECT ?sub1 ?sub2 ?comRel WHERE{
+# {?sub1 tp2:relative ?comRel .
+# ?sub2 tp2:relative ?comRel .}
+# UNION {?sub1 tp2:realName ?name .
+# ?sub2 tp2:relative ?name .
+# }
+# FILTER (?sub1!=?sub2)
+# }
