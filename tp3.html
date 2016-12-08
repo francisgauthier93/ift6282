@@ -15,9 +15,9 @@
 	<h3>Liens vers les fichiers utilisés</h3>
 	<ul>
 		<li><a href="allCharacters.xml">Fichier XML contenant les informations recueillies</a>(TP1)</li>
-		<li><a href="charactersOntology.owl">L'ontologie faite à la main avec Protégé</a></li>
-		<li><a href="CharactersToOwl.xsl">La feuille de style utilisée pour peupler l'ontologie</a></li>
-		<li><a href="xslAndMergeOnto.sh">Petit script</a> pour exécuter la feuille de style et <a href="mixOntologies.py">script python</a> pour combiner les deux ontologies (hardcodée et générée)</li>
+		<li><a href="OWL/charactersOntology.owl">L'ontologie faite à la main avec Protégé</a></li>
+		<li><a href="OWL/CharactersToOwl.xsl">La feuille de style utilisée pour peupler l'ontologie</a></li>
+		<li><a href="OWL/xslAndMergeOnto.sh">Petit script</a> pour exécuter la feuille de style et <a href="mixOntologies.py">script python</a> pour combiner les deux ontologies (hardcodée et générée)</li>
 	</ul>
 </p>
 
@@ -26,36 +26,32 @@
 	<div>
 		<p>
 			<b>Problématique:</b>
-			L'essentiel du travail consistait à reprendre les données en XML pour en faire un fichier RDF contenant des triplets illustrant les relations recueillies. Comme l'automatisation est de mise, le tout a été réalisé en utilisant une feuille de style XSLT.
-		</p>
+			L'essentiel du travail consistait à reprendre les données en XML pour en faire un fichier OWL contenant des classes en rapport avec le domaine choisi. Puis, déterminer des propriétés qui relient les classes et les individus. L'avantage d'une ontologie avec OWL est entre autres les multiples liens d'héritage et de lien logique entre les classes, donc une fois les classes et les propriétés initialisés, il a fallu créer des liens entre ceux-ci pour rendre notre ontologie plus vivante et inter-reliée. Par la suite, il a fallu peupler l'ontologie des quelques centaines propriétés recueillies. Évidemment, ici l'automatisation était de mise.</p>
 		<p>
 			<b>Apprentissages:</b>
 			<ul>
 				<li>Approfondissement de l'utilisation des feuilles de style XSLT.</li>
-				<li>Apprentissage d l'utilisation de la libraire ElementTree de Python.</li>
-				<li>Apprentissage des fichiers RDF, des espaces de noms dans RDF, de la visualisation et de la validation des RDF.</li>
-				<li>Mise en pratique des requêtes SparQL. Utilisation de SELECT, ORDER BY, FILTER, DISTINCT, COUNT et autres méthodes SparQL...</li>
+				<li>Introduction aux ontologies et aux multiples concepts s'y rattachant.</li>
+				<li>Pratique de l'utilisation du logiciel Protégé pour éditer des fichiers de type OWL.</li>
+				<li>Mise en pratique des 'reasoners' en OWL, de la logique d'inférence et de la syntaxe de Manchester.</li>
 			</ul>
 		</p>
 		<p>
 			<b>Difficultés:</b>
-			<h5>Séparation des liens familiaux</h5>
-			<p>Une des parties du travail qui a demandé beaucoup de temps a été de séparer les liens familiaux correctement à partir du HTML jusqu'au RDF. Étant donné la grande irrégularité dans la manière de présenter les liens familiaux sur le site de Wikia, il fut très difficile de bien séparer les liens familiaux. Une partie importante du code en Python est présent simplement pour cette fin. Au final, environ 95% des liens ont été bien séparés. La diversité des liens familiaux étant très grande, seule la nature des liens de sang direct a été conservée, autrement les personnes recoivent la valeur 'Known relative'. Si la personne a le mot 'deceased' dans sa description, on attribuera la valeur 'yes' à l'attribut 'deceased' En XML, ils sont représentés ainsi: <code> &ltrelative link='Known relative' deceased='no'&gtA person&lt/relative&gt</code></p>
-			<h5>Conversion des liens familiaux en RDF</h5>
-			<p>Malgré l'amélioration apportée à la représentation des liens familiaux, la conversion adéquate de ces relations en RDF a causé problème. On espérait avoir un triplet 'character1' 'tp2:motherIs' 'motherOfCharacter1' . Par contre, l'utilisation des variables pour créer le prédicat a été compromis. Pour le sujet et l'objet, il est possible d'utiliser relativement facilement des variables. Par contre, pour les prédicats, la syntaxe XML ne peut pas valider la syntaxe d'un élément qui a comme nom une variable et cela complique les choses. Il y a très peu de documentation à ce sujet sur Internet, ce qui m'a porté à croire que ce serait difficile ou impossible à réaliser. Comme solution, tous les liens familiaux ont été transformés comme <code>'character1' 'tp2:relative' 'relative'</code> . On perd donc la nature du lien familial. Du côté de l'attribut 'deceased', un triplet <code>'person' 'tp2:deceased' 'yes'</code> a été créé pour les personnes défuntes.
-			</p>
-			<h5>Difficultés à faire des requêtes intéressantes</h5>
-			<p>Malgré toutes les informations retenues sur les personnages de DC et le fait qu'on considère près de 20 personnages différents, ceux-ci ont souvent peu d'information en commun. C'est-à-dire qu'autre les charactéristiques humaines à comparer (la taille, les yeux, le sexe), le site Wikia ne donne pas suffisament d'information pour faire des requêtes plus intéressantes. Par exemple, les pouvoirs qu'ont les super-héros ne sont pas codées dans leur description, ce qui aurait permis de faire des comparaisons et des liens intéressants. Tout de même, 12 requêtes diversifiées ont été ajouté dans les exemples.</p>
+			<h5>Mise en place manuelle de l'ontologie</h5>
+			<p>Alors que l'introduction des individus dans l'ontologie a été réalisée de manière automatique, l'initialisation des classes et des propriétés a été faite de manière manuelle. Ceux-ci ont été de manière sommaire. Les classes et les propritétés ont été créée dans une hierarchie lorsque possible. Certaines propriétés ont été marquées comme inverses de d'autres propriétés. Une majorité des concepts vus en classe ont été pratiqué dans plusieurs classes. Par contre, la majorité des propriétés n'ont que le domaine et le 'range' de défini. Malgré l'interface agréable de Protégé, ce fut tout de même long d'entrer les multiples propriétés aux différentes classes et propriétés. D'ailleurs, comme on doit gérer les liens familiaux, il a beaucoup à faire de ce côté si on veut être exhaustif. De ce côté là aussi, on a travaillé de manière sommaire, similairement à ce qui a été vu en classe.</p>
+			<h5>Conversion des informations en instances de manière automatique</h5>
+			<p>Alors que la conversion des différentes informations de la majorité des personnages a été réalisée de manière automatique, plusieurs informations ont été transformées en littéral au lieu de créer des instances. Par exemple, plusieurs personnages font partie d'un groupe 'Justice League'. Par contre, dans tous les cas, on obtient la propriété <code>&lt affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/&gt</code>, mais lors de l'observation de l'ontologie dans Protégé, on voit que certains personnages sont affiliés à une instance nommée <i>Justice League</i>, alors que d'autre sont liés au littéral <i>"Justice League"</i>. Ainsi en cliquant sur l'instance, on ne voit pas complètement tous les usages de cette instance dans la fenêtre <i>usages</i> de Protégé. </p>
+			<h5>Difficultés à inférer des informations</h5>
+			<p>Malgré plusieurs ajouts sur des propriétés et des classes, peu d'inférence a été réalisée par le 'reasoner'. Par exemple, comme la propriété <i>affiliatedTo</i> a comme 'range' un groupe, je m'attendais à ce que les groupes comme <i>Justice League</i> soit inféré comme une instance de 'group', mais ça ne semble pas le cas. Par contre, certains essais ont mieux fonctionnés lorsque l'information était entrée à la main. Par exemple, en spécifiant que la classe 'Son' était équivalente à <code>sonOf some owl:Thing and hasGender some Male</code>, Protégé a inféré que le 'Deadshot' était un 'Son' alors que j'ai entré manuellement le lien avec son père et son sexe. Du fait que plusieurs informations sont entrés comme des littéral dans l'ontologie, cela freine grandement l'inférence.</p>
 		</p>
 		<p>
 			<b>Programmes utilisés:</b>
 			<ul>
 				<li>Pour la validation des fichiers XML: Oxygen 17</li>
 				<li>Pour la transformation des fichiers XML par une feuille de style XSLT (vers RDF): Oxygen 17</li>
-				<li>Pour enlever plusieurs tags HTML non-utilisés: commande 'sed' dans le terminal de Linux</li>
-				<li>Pour parcourir et parser les fichiers HTML et retirer les informations utiles: librairie python BeautifulSoup4 et librairie ElementTree</li>
-				<li>Pour la visualisation du graphe RDF en sortie: validateur RDF du site W3C.org</li>
-				<li>Pour les requêtes SparQL: Twinkle</li>
+				<li>Pour automatiser la transformation XSLT et la concaténation des ontologies: Scripts sh, scripts python et la commande xsltproc sur linux</li>
+				<li>Pour la création et visualisation de l'ontologie OWL: Protégé</li>
 			</ul>
 			
 		</p>
