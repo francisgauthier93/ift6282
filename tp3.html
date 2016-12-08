@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <head>
 	<title>Travail Pratique 3</title>
@@ -11,15 +12,15 @@
 	Dans le <a href="tp1.html">TP1</a> , j'ai décidé de travailler sur les super-héros. J'ai donc extrait de plusieurs page Wikia les informations de plusieurs super-héros de DC Comics. Après avoir traité les données, celles-ci ont été placées dans des fichiers XML pour faciliter la transformation de ces informations. Pour le <a href="tp2.html">TP2</a>, nous devions produire un fichier RDF contenant les informations recueillies en XML. Dans ce TP, il est question de prendre les données recueillies pour créer une ontologie du domaine ciblé. Dans l'ontologie présentée, nous avons créer des classes (Character, Gender, Relative, Location, Group...), des propriétés (hasEyes, hasAlias, affiliatedTo, knownRelativeOf...) et avons peuplé notre ontologie d'individus (Aquaman, Supergirl, Sinestro...).
 </p>
 <p>Voici le produit final des données traitées, transformé dans un ontologie de type OWL, en syntaxe XML/RDF: <a href="OWL/charactersOntologyComplete.owl" >Les super-héros en OWL</a></p>
-<p>
+
 	<h3>Liens vers les fichiers utilisés</h3>
 	<ul>
 		<li><a href="allCharacters.xml">Fichier XML contenant les informations recueillies</a>(TP1)</li>
 		<li><a href="OWL/charactersOntology.owl">L'ontologie faite à la main avec Protégé</a></li>
-		<li><a href="OWL/CharactersToOwl.xsl">La feuille de style utilisée pour peupler l'ontologie</a></li>
-		<li><a href="OWL/xslAndMergeOnto.sh">Petit script</a> pour exécuter la feuille de style et <a href="mixOntologies.py">script python</a> pour combiner les deux ontologies (hardcodée et générée)</li>
+		<li><a href="OWL/CharactersToOwl.xsl">La feuille de style utilisée pour peupler l'ontologie</a> (appliquée sur le xml en haut de liste)</li>
+		<li><a href="OWL/xslAndMergeOnto.sh">Petit script</a> pour exécuter la feuille de style et <a href="OWL/mixOntologies.py">script python</a> pour combiner les deux ontologies (hardcodée et générée)</li>
 	</ul>
-</p>
+
 
 <p>
 	<h2>Rapport:</h2>
@@ -39,11 +40,11 @@
 		<p>
 			<b>Difficultés:</b>
 			<h5>Mise en place manuelle de l'ontologie</h5>
-			<p>Alors que l'introduction des individus dans l'ontologie a été réalisée de manière automatique, l'initialisation des classes et des propriétés a été faite de manière manuelle. Ceux-ci ont été de manière sommaire. Les classes et les propritétés ont été créée dans une hierarchie lorsque possible. Certaines propriétés ont été marquées comme inverses de d'autres propriétés. Une majorité des concepts vus en classe ont été pratiqué dans plusieurs classes. Par contre, la majorité des propriétés n'ont que le domaine et le 'range' de défini. Malgré l'interface agréable de Protégé, ce fut tout de même long d'entrer les multiples propriétés aux différentes classes et propriétés. D'ailleurs, comme on doit gérer les liens familiaux, il a beaucoup à faire de ce côté si on veut être exhaustif. De ce côté là aussi, on a travaillé de manière sommaire, similairement à ce qui a été vu en classe.</p>
+			<p>Alors que l'introduction des individus dans l'ontologie a été réalisée de manière automatique, l'initialisation des classes et des propriétés a été faite de manière manuelle. Ceux-ci ont été de manière sommaire. Les classes et les propriétés ont été créée dans une hiérarchie lorsque possible. Certaines propriétés ont été marquées comme inverses de d'autres propriétés. Une majorité des concepts vus en classe ont été pratiqué dans plusieurs classes. Par contre, la majorité des propriétés n'ont que le domaine et le 'range' de défini. Malgré l'interface agréable de Protégé, ce fut tout de même long d'entrer les multiples propriétés aux différentes classes et propriétés. D'ailleurs, comme on doit gérer les liens familiaux, il a beaucoup à faire de ce côté si on veut être exhaustif. De ce côté là aussi, on a travaillé de manière sommaire, similairement à ce qui a été vu en classe.</p>
 			<h5>Conversion des informations en instances de manière automatique</h5>
-			<p>Alors que la conversion des différentes informations de la majorité des personnages a été réalisée de manière automatique, plusieurs informations ont été transformées en littéral au lieu de créer des instances. Par exemple, plusieurs personnages font partie d'un groupe 'Justice League'. Par contre, dans tous les cas, on obtient la propriété <code>&lt affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/&gt</code>, mais lors de l'observation de l'ontologie dans Protégé, on voit que certains personnages sont affiliés à une instance nommée <i>Justice League</i>, alors que d'autre sont liés au littéral <i>"Justice League"</i>. Ainsi en cliquant sur l'instance, on ne voit pas complètement tous les usages de cette instance dans la fenêtre <i>usages</i> de Protégé. </p>
+			<p>Alors que la conversion des différentes informations de la majorité des personnages a été réalisée de manière automatique, plusieurs informations ont été transformées en littéral au lieu de créer des instances. Par exemple, plusieurs personnages font partie d'un groupe 'Justice League'. Par contre, dans tous les cas, on obtient la propriété <code>&lt; affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/&gt;</code>, mais lors de l'observation de l'ontologie dans Protégé, on voit que certains personnages sont affiliés à une instance nommée <i>Justice League</i>, alors que d'autre sont liés au littéral <i>"Justice League"</i>. Ainsi en cliquant sur l'instance, on ne voit pas complètement tous les usages de cette instance dans la fenêtre <i>usages</i> de Protégé. </p>
 			<h5>Difficultés à inférer des informations</h5>
-			<p>Malgré plusieurs ajouts sur des propriétés et des classes, peu d'inférence a été réalisée par le 'reasoner'. Par exemple, comme la propriété <i>affiliatedTo</i> a comme 'range' un groupe, je m'attendais à ce que les groupes comme <i>Justice League</i> soit inféré comme une instance de 'group', mais ça ne semble pas le cas. Par contre, certains essais ont mieux fonctionnés lorsque l'information était entrée à la main. Par exemple, en spécifiant que la classe 'Son' était équivalente à <code>sonOf some owl:Thing and hasGender some Male</code>, Protégé a inféré que le 'Deadshot' était un 'Son' alors que j'ai entré manuellement le lien avec son père et son sexe. Du fait que plusieurs informations sont entrés comme des littéral dans l'ontologie, cela freine grandement l'inférence.</p>
+			<p>Malgré plusieurs ajouts sur des propriétés et des classes, peu d'inférence a été réalisée par le 'reasoner'. Par exemple, comme la propriété <i>affiliatedTo</i> a comme 'range' un groupe, je m'attendais à ce que les groupes comme <i>Justice League</i> soit inféré comme une instance de 'group', mais ça ne semble pas le cas. Par contre, certains essais ont mieux fonctionné lorsque l'information était entrée à la main. Par exemple, en spécifiant que la classe 'Son' était équivalente à <code>sonOf some owl:Thing and hasGender some Male</code>, Protégé a inféré que le 'Deadshot' était un 'Son' alors que j'ai entré manuellement le lien avec son père et son sexe. Du fait que plusieurs informations sont entrés comme des littéral dans l'ontologie, cela freine grandement l'inférence.</p>
 		</p>
 		<p>
 			<b>Programmes utilisés:</b>
