@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travail Pratique 3</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h1>Travail Pratique #3: OWL</h1>
+<h5>Décembre-2016-Travail pratique réalisé par Francis Gauthier, dans le cadre du cours IFT6282:Web Sémantique de l'Université de Montréal.<br/> Ce cours est donné par Guy Lapalme, au département d'informatique et de recherche opérationnelle.</h5>
+<p>
+	Dans le <a href="tp1.html">TP1</a> , j'ai décidé de travailler sur les super-héros. J'ai donc extrait de plusieurs page Wikia les informations de plusieurs super-héros de DC Comics. Après avoir traité les données, celles-ci ont été placées dans des fichiers XML pour faciliter la transformation de ces informations. Pour le <a href="tp2.html">TP2</a>, nous devions produire un fichier RDF contenant les informations recueillies en XML. Dans ce TP, il est question de prendre les données recueillies pour créer une ontologie du domaine ciblé. Dans l'ontologie présentée, nous avons créer des classes (Character, Gender, Relative, Location, Group...), des propriétés (hasEyes, hasAlias, affiliatedTo, knownRelativeOf...) et avons peuplé notre ontologie d'individus (Aquaman, Supergirl, Sinestro...).
+</p>
+<p>Voici le produit final des données traitées, transformé dans un ontologie de type OWL, en syntaxe XML/RDF: <a href="OWL/charactersOntologyComplete.owl" >Les super-héros en OWL</a></p>
+<p>
+	<h3>Liens vers les fichiers utilisés</h3>
+	<ul>
+		<li><a href="allCharacters.xml">Fichier XML contenant les informations recueillies</a>(TP1)</li>
+		<li><a href="charactersOntology.owl">L'ontologie faite à la main avec Protégé</a></li>
+		<li><a href="CharactersToOwl.xsl">La feuille de style utilisée pour peupler l'ontologie</a></li>
+		<li><a href="xslAndMergeOnto.sh">Petit script</a> pour exécuter la feuille de style et <a href="mixOntologies.py">script python</a> pour combiner les deux ontologies (hardcodée et générée)</li>
+	</ul>
+</p>
+
+<p>
+	<h2>Rapport:</h2>
+	<div>
+		<p>
+			<b>Problématique:</b>
+			L'essentiel du travail consistait à reprendre les données en XML pour en faire un fichier RDF contenant des triplets illustrant les relations recueillies. Comme l'automatisation est de mise, le tout a été réalisé en utilisant une feuille de style XSLT.
+		</p>
+		<p>
+			<b>Apprentissages:</b>
+			<ul>
+				<li>Approfondissement de l'utilisation des feuilles de style XSLT.</li>
+				<li>Apprentissage d l'utilisation de la libraire ElementTree de Python.</li>
+				<li>Apprentissage des fichiers RDF, des espaces de noms dans RDF, de la visualisation et de la validation des RDF.</li>
+				<li>Mise en pratique des requêtes SparQL. Utilisation de SELECT, ORDER BY, FILTER, DISTINCT, COUNT et autres méthodes SparQL...</li>
+			</ul>
+		</p>
+		<p>
+			<b>Difficultés:</b>
+			<h5>Séparation des liens familiaux</h5>
+			<p>Une des parties du travail qui a demandé beaucoup de temps a été de séparer les liens familiaux correctement à partir du HTML jusqu'au RDF. Étant donné la grande irrégularité dans la manière de présenter les liens familiaux sur le site de Wikia, il fut très difficile de bien séparer les liens familiaux. Une partie importante du code en Python est présent simplement pour cette fin. Au final, environ 95% des liens ont été bien séparés. La diversité des liens familiaux étant très grande, seule la nature des liens de sang direct a été conservée, autrement les personnes recoivent la valeur 'Known relative'. Si la personne a le mot 'deceased' dans sa description, on attribuera la valeur 'yes' à l'attribut 'deceased' En XML, ils sont représentés ainsi: <code> &ltrelative link='Known relative' deceased='no'&gtA person&lt/relative&gt</code></p>
+			<h5>Conversion des liens familiaux en RDF</h5>
+			<p>Malgré l'amélioration apportée à la représentation des liens familiaux, la conversion adéquate de ces relations en RDF a causé problème. On espérait avoir un triplet 'character1' 'tp2:motherIs' 'motherOfCharacter1' . Par contre, l'utilisation des variables pour créer le prédicat a été compromis. Pour le sujet et l'objet, il est possible d'utiliser relativement facilement des variables. Par contre, pour les prédicats, la syntaxe XML ne peut pas valider la syntaxe d'un élément qui a comme nom une variable et cela complique les choses. Il y a très peu de documentation à ce sujet sur Internet, ce qui m'a porté à croire que ce serait difficile ou impossible à réaliser. Comme solution, tous les liens familiaux ont été transformés comme <code>'character1' 'tp2:relative' 'relative'</code> . On perd donc la nature du lien familial. Du côté de l'attribut 'deceased', un triplet <code>'person' 'tp2:deceased' 'yes'</code> a été créé pour les personnes défuntes.
+			</p>
+			<h5>Difficultés à faire des requêtes intéressantes</h5>
+			<p>Malgré toutes les informations retenues sur les personnages de DC et le fait qu'on considère près de 20 personnages différents, ceux-ci ont souvent peu d'information en commun. C'est-à-dire qu'autre les charactéristiques humaines à comparer (la taille, les yeux, le sexe), le site Wikia ne donne pas suffisament d'information pour faire des requêtes plus intéressantes. Par exemple, les pouvoirs qu'ont les super-héros ne sont pas codées dans leur description, ce qui aurait permis de faire des comparaisons et des liens intéressants. Tout de même, 12 requêtes diversifiées ont été ajouté dans les exemples.</p>
+		</p>
+		<p>
+			<b>Programmes utilisés:</b>
+			<ul>
+				<li>Pour la validation des fichiers XML: Oxygen 17</li>
+				<li>Pour la transformation des fichiers XML par une feuille de style XSLT (vers RDF): Oxygen 17</li>
+				<li>Pour enlever plusieurs tags HTML non-utilisés: commande 'sed' dans le terminal de Linux</li>
+				<li>Pour parcourir et parser les fichiers HTML et retirer les informations utiles: librairie python BeautifulSoup4 et librairie ElementTree</li>
+				<li>Pour la visualisation du graphe RDF en sortie: validateur RDF du site W3C.org</li>
+				<li>Pour les requêtes SparQL: Twinkle</li>
+			</ul>
+			
+		</p>
+	</div>
+</p>
+</body>
+</html>

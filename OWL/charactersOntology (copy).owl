@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#"
+     xml:base="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#affilatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#affilatedTo">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#bornIn -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#bornIn">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#citizenshipIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#citizenshipIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#createdBy">
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasAlias -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasAlias">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasBaseOfOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasBaseOfOperation">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasEyes -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasEyes">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasGender">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasHair -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasHair">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasRealName -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasRealName">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#identityIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#identityIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#isAligned -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#isAligned">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#maritalStatusIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#maritalStatusIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#occupationIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#occupationIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#originated -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#originated">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures -->
+
+    <owl:DatatypeProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights -->
+
+    <owl:DatatypeProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ancestor -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ancestor">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aunt -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aunt">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Country -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Country">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Daughter -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Daughter">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Descendant -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Descendant">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Father -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Father">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandfather -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandfather">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandmother -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandmother">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Husband -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Husband">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mother -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mother">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sibling -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sibling">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Son -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Son">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#SuperHeroAlias -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#SuperHeroAlias">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Uncle -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Uncle">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wife -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wife">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Killer_Frost -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Killer_Frost">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <affilatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret_Society_of_Super-Villains"/>
+        <citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/>
+        <createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens"/>
+        <hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh"/>
+        <hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/>
+        <hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/>
+        <hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White"/>
+        <hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow"/>
+        <identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity"/>
+        <isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad"/>
+        <maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/>
+        <occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist"/>
+        <originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth"/>
+        <measures>5&apos;4&quot;</measures>
+        <weights>123 lbs (56kg)</weights>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret_Society_of_Super-Villains -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret_Society_of_Super-Villains">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1109 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#"
+     xml:base="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#affiliatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#affiliatedTo">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf"/>
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#auntOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#auntOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#bornIn -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#bornIn">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#childrenOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#childrenOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#citizenshipIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#citizenshipIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#createdBy">
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#creates">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#daughterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#daughterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#childrenOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#educationIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#educationIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Degree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#fatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#fatherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandChildrenOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandChildrenOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandParentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandDaughterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandDaughterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandChildrenOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandFatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandFatherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandParentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandMotherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandMotherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandParentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandParentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandParentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandSonOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandSonOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandChildrenOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasAlias -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasAlias">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasBaseOfOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasBaseOfOperation">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasEyes -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasEyes">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasGender">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasHair -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasHair">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasRealName -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasRealName">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#husbandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#husbandOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#spouseOf"/>
+        <owl:inverseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#wifeOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#identityIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#identityIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#inARelationshipWith -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#inARelationshipWith">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#isAligned -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#isAligned">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#maritalStatusIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#maritalStatusIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#motherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#motherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#nephewOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#nephewOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#nieceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#nieceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#occupationIs -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#occupationIs">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#originated -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#originated">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#siblingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#siblingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#knownRelativeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#sonOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#sonOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#childrenOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#spouseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#spouseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#inARelationshipWith"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#uncleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#uncleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights">
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#wifeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#wifeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#spouseOf"/>
+        <rdfs:domain rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+        <rdfs:range rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures -->
+
+    <owl:DatatypeProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#measures"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights -->
+
+    <owl:DatatypeProperty rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#weights"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ancestor -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ancestor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#ancestorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aunt -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aunt">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#auntOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Country -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Country">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Daughter -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Daughter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#daughterOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Degree -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Degree"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Descendant -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Descendant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#descendantOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Father -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Father">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#parentOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#fatherOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandfather -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandfather">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandFatherOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandmother -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grandmother">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#grandMotherOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Height">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Husband -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Husband">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#husbandOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mother -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mother">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#motherOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Person"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sibling -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sibling">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#siblingOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Son -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Son">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#sonOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#SuperHeroAlias -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#SuperHeroAlias">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Uncle -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Uncle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#uncleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Weight">
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wife -->
+
+    <owl:Class rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wife">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#wifeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Relative"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Citizenship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alignment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Creator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Deadshot -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Deadshot">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Floyd_Lawton"/>
+        <sonOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George_Lawton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Floyd_Lawton -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Floyd_Lawton">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George_Lawton -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George_Lawton">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Father"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Francis_Quinzel -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Francis_Quinzel">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Hackemup -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Hackemup">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Quinn -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Quinn">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Suicide_Squad"/>
+        <hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Hackemup"/>
+        <hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow_Lantern"/>
+        <hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harley_Francis_Quinzel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Killer_Frost -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Killer_Frost">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/>
+        <citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/>
+        <createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dan_Jurgens"/>
+        <hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh"/>
+        <hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/>
+        <hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/>
+        <hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White"/>
+        <hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Caitlin_Snow"/>
+        <identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity"/>
+        <isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad"/>
+        <maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/>
+        <occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist"/>
+        <originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth"/>
+        <measures>5&apos;4&quot;</measures>
+        <weights>123 lbs (56kg)</weights>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pittsburgh">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime_Earth">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Universe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public_Identity">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Identity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Scientist">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Occupation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret_Society_of_Super-Villains -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret_Society_of_Super-Villains">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marital_Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Suicide_Squad -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Suicide_Squad">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow_Lantern -->
+
+    <owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow_Lantern">
+        <rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alias"/>
+    </owl:NamedIndividual>
+
+
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Batman"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bruce Wayne"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Insider"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Matches Malone"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Robin"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Simon Hurt"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alfred Pennyworth"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dick Grayson"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jason Todd"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Martha Wayne"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Damian Wayne"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Roderick Kane"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Tim Drake"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Nathan Kane"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cassandra Cain"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Betsy Kane"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Agatha Wayne"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wayne Family"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Thomas Wayne"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Batman Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Batman Incorporated"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Outsiders"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wayne Enterprises"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Club of Heroes"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly White Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sinestro Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Batcave"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Stately Wayne Manor"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Hall of Justice"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Watchtower"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Businessman"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 2&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#210 lbs (95 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bill Finger"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bob Kane"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aquaman"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Orin Atlan-son"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dweller in the Depths"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Swimmer"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Waterbearer"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mental Man"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aquaboy"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Water Wraith"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Nala"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Orm Marius"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlan"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Arthur Curry"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kordax"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Fatima"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kalunga"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Hila"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Shalako"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cole"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bazil"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jr."/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlanna"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Debbie Perkins"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Regin"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Haumond"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lorelei"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Loma"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Illya"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Manu"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Honsu"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Narmea"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Tom Curry"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kraken"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#A.J."/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Drin"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Orin"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Thorvall"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlena"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cora"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alloroc"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Porm"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gana"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dardanus"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Fiona"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mera"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Koryak"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Aquaman Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlantean Royal Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Black Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League International"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Detroit"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#U.N."/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlantean Royal Palace"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Poseidonis"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlantis"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly San Diego"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#California"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlantean"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Married"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Monarch"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 1&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#325 lbs (147 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Poseidonis"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Atlantis"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mort Weisinger"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Paul Norris"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superman"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kal-El (birth); Clark Joseph Kent (legal name)"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Clark White, Commander El"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gangbuster"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Nightwing"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superboy"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superman Red / Blue"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kara Zor-El"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jor-El"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jonathan Samuel Kent"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kon-El/Conner Kent"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#deceased, Rao ancestor, See House of El and Kent Family for extended family line"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lois Lane"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#foster son, Kem-L ancestor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Martha Kent"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#adopted into both El and Kent families, Christopher Kent aka Nightwing"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jonathan Kent"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lara Lor-Van"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Daily Planet"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Legion of Super-Heroes"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kryptonian Military Guild"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Team Superman"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Supermen of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Supermen of the Multiverse"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Metropolis"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Fortress of Solitude"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Hall of Justice"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Married"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Reporter"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 3&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#235 lbs (107 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kryptonopolis"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Krypton"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jerry Siegel"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joe Shuster"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#The_Flash"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bartholomew Henry &quot;Barry&quot; Allen"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black Flash"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Parallax"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue Lantern"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wally West  - see Allen Family for complete family tree"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Malcolm Thawne"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Don and Dawn Allen"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Iris Allen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Henry and Nora Allen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bart Allen  and Jenni Ognats"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Flash Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Blue Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Central City"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Married"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Forensic Scientist"/><educationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bachelors Degree (summa cum laude) in organic chemistry from Sun City University"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 0&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#195 lbs (88 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Fallville, Iowa"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Robert Kanigher"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Carmine Infantino"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green_Arrow"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Oliver Jonas &quot;Ollie&quot; Queen"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Robert Queen"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Moira Queen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dinah Lance"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Robert Henry Queen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Roy Harper"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Connor Hawke"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Team Arrow"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Queen Industries"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#N.S.A."/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Black Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Outsiders"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Elite"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Star City"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#California"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Seattle"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Washington"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Divorced"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Former Businessman"/><educationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#College Graduate"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 11&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#195 lbs (88 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mort Weisinger"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George Papp"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Martian_Manhunter"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#J'onn J'onzz"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Fernus"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#John Jones"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bronze Wraith"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bloodwynd"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#many others (See Other Aliases )"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ma'alefa'ak"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#M'yri'ah"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#J'ahrl J'onzz"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#D'all"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#K'hym"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sha'sheen J'onzz"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#M'yrnn J'onzz"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Outsiders"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice Experience"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#StormWatch"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Task Force Justice League International"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black Lantern Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mobile, formerly The Astral Plane"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Mars"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Middleton"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Colorado"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Denver"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Colorado"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Detroit"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Michigan"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Z'Onn Z'Orr"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly JLA Watchtower"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Widowed"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Adventurer"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 7&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#300 lbs (136 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Red"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bald"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ma'aleca'andra"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joseph Samachson"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joe Certa"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green_Lantern"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harold &quot;Hal&quot; Jordan"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Parallax"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#the Spectre"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Pol Manning"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green Lantern 2814.1, Highball"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jordan Family"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jim Jordan"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jack Jordan"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Martin Jordan"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jessica Jordan"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Air Wave"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green Lantern Corps Justice League of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly: New Guardians Justice League Europe Red Lantern Corps Orange Lantern Corps Sinestro Corps Blue Lantern Corps Black Lantern Corps White Lantern Corps Ferris Aircraft United States Air Force"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Edwards Air Force Base"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Coast City / Oa"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Adventurer"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 2&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#200 lbs (91 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Brown"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Brown"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Coast City"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#California"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#John Broome"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gil Kane"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dr_Alchemy"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Albert &quot;Al&quot; Desmond"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mister Element"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Rita Desmond"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alvin Desmond"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Formerly Rogues"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Central City"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Divorced"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Professional Criminal"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 11&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#171 lbs (78 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Red"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#John Broome"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Carmine Infantino"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wonder_Woman"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Diana of Themyscira"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#War"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Diana Prince"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow Lantern"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cassie Sandsmark"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Zeus  Hippolyta  First Born  Lennox  Milan  Zeke  Cassandra  Siracca  Ares  Jason"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gods of Olympus"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Sinestro Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Themyscira"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly London"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Amazon"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dating"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Goddess of War"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 2&quot;"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Paradise Island"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#William Moulton Marston"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Harry G. Peter"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cyborg"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Victor &quot;Vic&quot; Stone"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Silas Stone"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Elinore Stone"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grid"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Watchtower"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Detroit"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 6&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#385 lbs (175 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Brown"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime Earth"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marv Wolfman"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George Perez"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lex_Luthor"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Alexander Joseph Luthor"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mockingbird"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superboy "/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lori Luthor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Elizabeth Perske"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Edna Luthor"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Letitia Luthor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Contessa Erica Alexandra del Portenza"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Wallace Luthor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Perry J. &quot;Jerry&quot; White Jr."/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Elaine Griggs"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lionel Luthor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lena Luthor"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Casey Griggs"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Superman Revenge Squad"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice Gang"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Six"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Metropolis"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Widowed"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Businessman"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 2&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#210 lbs (95 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bald"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Suicide Slum"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Metropolis"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jerry Siegel"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joe Shuster"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#The_Joker"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Unknown"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Domino Killer"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gravedigger"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joe Kerr"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Oberon Sexton"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Red Hood"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Possible unborn son"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lonnie Machin  [1]"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Melvin Reipan"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jeannie"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black Glove"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice Gang"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joker League of Anarchy"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Arkham Asylum"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ha-Hacienda"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bad"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Widowed"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Professional criminal"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 5&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#192 lbs (87 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jerry Robinson"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bill Finger"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bob Kane"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Cheetah"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Barbara Ann Minerva"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#The Society"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Nottingham"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#United Kingdom"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#British"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Anthropologist"/><educationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#College Graduate, PH.D."/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 9&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#120 lbs (54 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Brown"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Auburn"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Nottingham"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Len Wein"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George Perez"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sinestro"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Thaal Sinestro"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green Lantern"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow Lantern"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Parallax"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Indigo Lantern"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Soranik Natu"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Amon Sur"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Unnamed father Witch Queen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Abin Sur"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Arin Sur"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sinestro Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Green Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Guardians Secret Society"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Anti-Justice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White Lantern Corps"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Indigo Tribe"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Ranx"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Warworld"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly New Korugar"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Qward"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Oa"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Neutral"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Widowed"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Formerly Anthropologist"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 7&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#205 lbs (93 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Korugar City"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Korugar"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#John Broome"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gil Kane"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Supergirl"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kara Zor-El"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Claire Connors, Linda Lang"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kara Kent"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Flamebird"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superman"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Jor-El"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Allura In-Ze"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lara Lor-Van"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Zor-El"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Supermen of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League of Amazons"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kent Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Superman Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Kryptonian Science Guild"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Teen Titans"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Legion of Super-Heroes"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female Furies"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Metropolis"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Krypton"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Student"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 5&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#135 lbs (61 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Argo City"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Krypton"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Otto Binder"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Al Plastino"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Catwoman"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Selina Kyle"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Irena Dubrovna"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Maria Kyle"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Brian Kyle"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Maggie Kyle"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Helena Kyle"/><descendantOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Lorna Kyle"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bat-Family"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Outsiders"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Birds of Prey"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female Furies"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#The Society"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Neutral"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Single"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Thief"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 7&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#133 lbs (60 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Green"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bill Finger"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Bob Kane"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Black_Canary"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dinah Laurel Lance"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dinah Lance"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Larry Lance"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Craig Windrow"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Oliver Queen"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Connor Hawke"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dinah Drake"/><grandChildrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Richard Drake"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sin"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Birds of Prey"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Justice League of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice Society of America"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League Task Force"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Justice League International"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Team Arrow"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly Star City"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Seattle"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Good"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Public Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Divorced"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Adventurer"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Female"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#5' 7&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#130 lbs (59 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blond"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Earth-One"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#New Earth"/><bornIn rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Gotham City"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dennis O'Neil"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Dick Dillin"/></owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Deathstroke"><rdf:type rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Character"/><hasRealName rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Slade Wilson"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Terminator"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Yellow Lantern"/><hasAlias rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#The Balkan"/><knownRelativeOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Rose Wilson"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Joseph Wilson"/><parentOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Grant Wilson"/><spouseOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Adeline Kane"/><childrenOf rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Charles Wilson"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#formerly League of Assassins"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Injustice League"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Society of Super-Villains"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Team 7"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Suicide Squad"/><affiliatedTo rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Sinestro Corps"/><hasBaseOfOperation rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mobile"/><isAligned rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Neutral"/><identityIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Secret Identity"/><citizenshipIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#American"/><maritalStatusIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Widowed"/><occupationIs rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Mercenary"/><hasGender rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Male"/><measures rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#6' 4&quot;"/><weights rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#225 lbs (102 kg)"/><hasEyes rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Blue"/><hasHair rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#White"/><originated rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Prime Earth"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#Marv Wolfman"/><createdBy rdf:resource="http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3#George Perez"/></owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

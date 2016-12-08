@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1481166662594" name="duplicate:http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3" uri="charactersOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481166662594" name="duplicate:http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3" uri="otherCharacters.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481166662594" name="duplicate:http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3" uri="charactersOntology%20(copy).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1481166662594" name="duplicate:http://www-etud.iro.umontreal.ca/~gauthif/ift6282/tp3" uri="charactersOntologyComplete.owl"/>
+    </group>
+</catalog>
